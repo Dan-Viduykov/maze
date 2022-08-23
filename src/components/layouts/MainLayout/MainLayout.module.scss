@@ -1,0 +1,13 @@
+.layout {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow: hidden;
+    
+    &__main {
+        background-color: #fff;
+        align-self: center;
+        justify-self: center;
+    }
+}

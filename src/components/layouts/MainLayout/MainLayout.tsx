@@ -1,4 +1,6 @@
 import { FC, ReactNode } from "react";
+import Container from "../../Container";
+import Header from "../../Header";
 import styles from "./MainLayout.module.scss";
 
 interface MainLayoutProps {
@@ -8,9 +10,10 @@ interface MainLayoutProps {
 const MainLayout: FC<MainLayoutProps> = ({children}) => {
     return (
         <div className={styles.layout}>
-            <main className={styles.layout__main}>
+            <Header />
+            <Container className={styles.layout__main}>
                 {children}
-            </main>
+            </Container>
         </div>
     )
 }
