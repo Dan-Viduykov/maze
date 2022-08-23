@@ -1,11 +1,12 @@
 import { FC } from "react";
+import GameField from "../../GameField";
 import styles from "./Home.module.scss";
 
 const Home: FC = () => {
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <GameField />
+        </>
     )
 }
 

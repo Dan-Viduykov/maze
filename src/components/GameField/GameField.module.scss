@@ -1,0 +1,13 @@
+@import '../../styles/main.scss';
+
+.field {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    gap: 10px;
+
+    &__item {
+        background: orange;
+        border-radius: 16px;
+    }
+}
