@@ -1,0 +1,10 @@
+.home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content min-content;
+    gap: 200px;
+
+    &__field {
+        justify-self: start;
+    }
+}
