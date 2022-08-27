@@ -1,4 +1,5 @@
-import { FC } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 import styles from "./Arrows.module.scss";
 
 interface ArrowsProps {
@@ -7,16 +8,16 @@ interface ArrowsProps {
 
 const Arrows: FC<ArrowsProps> = ({className}) => {
     const uuid = require('uuid')
-    const directions = [-3, -1, 1, 3, -3, -1, 1, 3, -3, -1]
-    const arrows = directions.map(direction => {
-        return <li key={uuid.v4()} className={styles.arrows__item}>
-            {direction}
-        </li>
-    })
+    const { directions, game } = useTypedSelector(state => state.appReducer);
+    const [ arrows, setArrows ] = useState([])
 
     return (
         <ul className={`${styles.arrows} ${className}`}>
-            {arrows}
+            {arrows.map(arrow => {
+                return <li key={uuid.v4()} className={styles.arrows__item}>
+                    {arrow}
+                </li>
+            })}
         </ul>
     )
 }

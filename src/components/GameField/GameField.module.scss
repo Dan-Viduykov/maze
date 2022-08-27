@@ -5,6 +5,7 @@
     height: 500px;
     display: grid;
     gap: 10px;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 
     &__item {
         background: orange;
